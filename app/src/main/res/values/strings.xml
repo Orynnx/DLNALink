@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">DLNALink</string>
+    <string name="debug_info">Diagnostics</string>
+    <string name="copy">Copy</string>
+    <string name="logs_copied">Logs copied</string>
+    <string name="multicast_lock">Multicast lock</string>
+    <string name="location_permission">Location permission</string>
+    <string name="recent_logs">Recent logs (%1$d)</string>
+    <string name="checking">Checking…</string>
+    <string name="scan">Find TVs / devices</string>
+    <string name="scanning">Scanning…</string>
+    <string name="ssid">Wi-Fi: %1$s</string>
+    <string name="device_count">Devices found: %1$d</string>
+    <string name="choose_device">Choose playback device</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_devices">No devices found</string>
+    <string name="discovery_help">Check that your phone and TV are on the same Wi-Fi, the DLNA receiver is running, and AP isolation is disabled.</string>
+    <string name="cast_success">Playback requested</string>
+    <string name="cast_failed">Playback failed</string>
+    <string name="shared_link">Shared link loaded</string>
+    <string name="location_required">Location permission is needed to discover DLNA devices</string>
+    <string name="ok">OK</string>
+    <string name="unavailable">Unavailable</string>
 </resources>

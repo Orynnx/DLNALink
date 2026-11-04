@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DLNALink"
 include(":app")
+include(":tvbridge")

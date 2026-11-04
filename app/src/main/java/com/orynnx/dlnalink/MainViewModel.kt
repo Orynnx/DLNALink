@@ -93,7 +93,7 @@ class MainViewModel : ViewModel() {
             Log.d("DlnaCast", "========================================")
             Log.d("DlnaCast", "开始投屏流程")
             Log.d("DlnaCast", "设备: ${device.friendlyName}")
-            Log.d("DlnaCast", "媒体: $mediaUrl")
+            Log.d("DlnaCast", "Media URI loaded")
             Log.d("DlnaCast", "控制点: ${device.controlUrl}")
 
             // 1. 发送 Stop 指令（清理之前的播放状态）
@@ -141,7 +141,7 @@ class MainViewModel : ViewModel() {
     <s:Body>
         <u:$action xmlns:u="$serviceType">
             <InstanceID>0</InstanceID>
-            <CurrentURI>$mediaUrl</CurrentURI>
+            <CurrentURI>${escapeMediaUri(mediaUrl)}</CurrentURI>
             <CurrentURIMetaData>$metadata</CurrentURIMetaData>
         </u:$action>
     </s:Body>
@@ -186,7 +186,7 @@ class MainViewModel : ViewModel() {
                 val body = response.body?.string() ?: ""
                 Log.d("DlnaCast", "SOAP $action 响应: ${response.code}")
                 if (!response.isSuccessful) {
-                    Log.w("DlnaCast", "错误响应内容: $body")
+                    Log.w("DlnaCast", "SOAP request failed with HTTP ${response.code}")
                 }
                 return response.isSuccessful
             }
